@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 from Colours import colour_list, F_WIDTH, F_HEIGHT, BLOCK_SIZE, BLOCK_HOR, MAX_BLOCKS, EOF_INDEX
 
+FPS = 6  # From testing this is seemingly the minimum FPS YouTube supports
+
 
 def draw(colour_values):
     colour_values.extend([EOF_INDEX, EOF_INDEX])
@@ -22,7 +24,7 @@ def draw(colour_values):
 
 
 def create_mp4_cv2(image_list, name):
-    out = cv2.VideoWriter(f"{name}.mp4", cv2.VideoWriter_fourcc(*'mp4v'), 1, (F_WIDTH, F_HEIGHT))
+    out = cv2.VideoWriter(f"{name}.mp4", cv2.VideoWriter_fourcc(*'mp4v'), FPS, (F_WIDTH, F_HEIGHT))
     for image in image_list:
         rgb = image[..., ::-1].copy()  # open-cv uses the bgr colour format
         out.write(rgb)
