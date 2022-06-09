@@ -22,7 +22,6 @@ def decode(input_video, delete_after):
 def main():
     args = parse()
     varargs = vars(args)
-    print(varargs)
     if args.command_name == encode_command:
         encode(varargs[encode_src])
     if args.command_name == decode_command:
