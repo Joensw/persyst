@@ -15,15 +15,20 @@ There are two commands, encode and decode.
 
 To turn a file into an MP4 use encode:
 
-```console
+```
 $ filetomp4.exe encode <filename.extension>
 ```
 
 To turn an MP4 back into the original file use decode:
 
-```console
+```
 $ filetomp4.exe decode <filename.mp4> [--delete]
 ```
 With the optional --delete flag, you can tell the program to delete the video file after decoding it.
 
 ## Demo
+
+https://user-images.githubusercontent.com/84239673/172876137-77b5c1bf-49ae-4ed1-b741-24562b75cb16.mp4
+
+
+As the video shows, converting even just a ~300KB file already takes a significant amount of time
