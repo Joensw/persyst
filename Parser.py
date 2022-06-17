@@ -21,7 +21,7 @@ def parse():
     parser = argparse.ArgumentParser(description="Convert a file into a visual representation as an MP4 an back")
 
     subparsers = parser.add_subparsers(dest="command_name", title="Commands",
-                                       description="Valid commands the program offers")
+                                       description="Valid commands the program offers", required=True)
 
     parser_encode = subparsers.add_parser(encode_command,
                                           help="Store bytes from a file as colour blocks in an MP4")
