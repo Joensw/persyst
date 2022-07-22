@@ -3,6 +3,7 @@ import argparse
 
 encode_command = "encode"
 encode_src = "src_file"
+encode_upload = "upload"
 
 decode_command = "decode"
 decode_src = "src_file"
@@ -27,6 +28,8 @@ def parse():
                                           help="Store bytes from a file as colour blocks in an MP4")
 
     parser_encode.add_argument(encode_src, type=source_file, help="Path to a file which is used as the source")
+    parser_encode.add_argument(f"--{encode_upload}", help="Upload video to YouTube after creating it",
+                               action="store_true")
 
     parser_decode = subparsers.add_parser(decode_command,
                                           help="Revert an MP4 from a previous encode back into the original file")

@@ -24,7 +24,7 @@ def draw(colour_values):
 
 
 def create_mp4_cv2(image_list, name):
-    out = cv2.VideoWriter(f"{name}.mp4", cv2.VideoWriter_fourcc(*'mp4v'), FPS, (F_WIDTH, F_HEIGHT))
+    out = cv2.VideoWriter(name, cv2.VideoWriter_fourcc(*'mp4v'), FPS, (F_WIDTH, F_HEIGHT))
     for image in image_list:
         rgb = image[..., ::-1].copy()  # open-cv uses the bgr colour format
         out.write(rgb)
