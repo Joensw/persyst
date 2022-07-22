@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from Colours import colour_list, F_WIDTH, F_HEIGHT, BLOCK_SIZE, BLOCK_HOR, MAX_BLOCKS, EOF_INDEX
+from colours import colour_list, F_WIDTH, F_HEIGHT, BLOCK_SIZE, BLOCK_HOR, MAX_BLOCKS, EOF_INDEX
 
 FPS = 6  # From testing this is seemingly the minimum FPS YouTube supports
 

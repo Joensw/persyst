@@ -1,6 +1,6 @@
 import sys
 import cv2
-from Colours import BLOCK_SIZE, BLOCK_HOR, BLOCKS_VERT, EOF_INDEX, find_closest_index
+from colours import BLOCK_SIZE, BLOCK_HOR, BLOCKS_VERT, EOF_INDEX, find_closest_index
 
 
 def grab_frames(video_source):

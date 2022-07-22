@@ -1,21 +1,21 @@
-import ByteConverter
-import ImageGenerator
-import ImageDecoder
+import byte_converter
+import image_generator
+import image_decoder
 import uploader
 
 import os
 
 from types import SimpleNamespace
 from pathlib import Path
-from Parser import parse, encode_command, decode_command, encode_src, encode_upload, decode_src, decode_del
+from parser import parse, encode_command, decode_command, encode_src, encode_upload, decode_src, decode_del
 from googleapiclient.errors import HttpError
 
 
 def encode(input_file, upload_after):
-    input_nibbles = ByteConverter.read_nibbles(input_file)
-    image_list = ImageGenerator.draw(input_nibbles)
+    input_nibbles = byte_converter.read_nibbles(input_file)
+    image_list = image_generator.draw(input_nibbles)
     video_file = f"{input_file}ENCODED.mp4"
-    ImageGenerator.create_mp4_cv2(image_list, video_file)
+    image_generator.create_mp4_cv2(image_list, video_file)
 
     original_file_type = Path(input_file).suffix
     if upload_after:
@@ -23,9 +23,9 @@ def encode(input_file, upload_after):
 
 
 def decode(input_video, delete_after):
-    frame_list = ImageDecoder.grab_frames(input_video)
-    byte_list = ImageDecoder.decode_frames(frame_list)
-    ByteConverter.write_bytes(f"{input_video}DECODED", byte_list)
+    frame_list = image_decoder.grab_frames(input_video)
+    byte_list = image_decoder.decode_frames(frame_list)
+    byte_converter.write_bytes(f"{input_video}DECODED", byte_list)
     if delete_after:
         os.remove(input_video)
 
