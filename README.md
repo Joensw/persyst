@@ -1,4 +1,4 @@
-# FileToMP4
+# persyst
 
 A small Python program to turn any file into an MP4 and back, by storing bytes as colour blocks.
 
