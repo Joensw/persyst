@@ -2,7 +2,7 @@
 
 A small Python program to turn any file into an MP4 and back, by storing bytes as colour blocks.
 
-It was created mainly to learn the basics of python, but the original idea was to use it to store data persistently on a platform like YouTube. That quickly turned out to be unfeasible as it is far too inefficient and slow for any meaningful practical use. The silly idea for it came to me after watching [this](https://www.youtube.com/watch?v=JcJSW7Rprio) rather excellent YouTube video.
+It was created with the intention of seeing whether or not it would be possible to store data persistently on a platform like YouTube. Sadly in its current implementation the process is far too inefficient and slow for any meaningful practical use. The silly idea for it came to me after watching [this](https://www.youtube.com/watch?v=JcJSW7Rprio) rather excellent YouTube video.
 
 
 ## Installation
