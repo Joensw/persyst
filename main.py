@@ -2,12 +2,13 @@ import byte_converter
 import image_generator
 import image_decoder
 import uploader
+from p_parser import parse_args, encode_command, decode_command, encode_src, encode_upload, decode_src, decode_del
 
 import os
 
 from types import SimpleNamespace
 from pathlib import Path
-from parser import parse, encode_command, decode_command, encode_src, encode_upload, decode_src, decode_del
+
 from googleapiclient.errors import HttpError
 
 
@@ -45,7 +46,7 @@ def upload(src_file, file_type):
 
 
 def main():
-    args = parse()
+    args = parse_args()
     varargs = vars(args)
     if args.command_name == encode_command:
         encode(varargs[encode_src], varargs[encode_upload])

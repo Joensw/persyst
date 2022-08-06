@@ -18,7 +18,7 @@ def source_file(path):
         raise argparse.ArgumentTypeError(f"the path {path} is not valid, or not a file")
 
 
-def parse():
+def parse_args():
     parser = argparse.ArgumentParser(description="Convert a file into a visual representation as an MP4 an back")
 
     subparsers = parser.add_subparsers(dest="command_name", title="Commands",
